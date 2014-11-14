@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>touch</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var startX = '';
+	var startY = '';
+	var endX = '';
+	var endY = '';
+	var distanceX = '';
+	var distanceY = '';
+	document.addEventListener('touchstart',function(event){
+		startX = event.touches[0].clientX;
+		startY = event.touches[0].clientY;
+	},false)
+	document.addEventListener('touchend',function(event){
+		endX = event.changedTouches[0].clientX;
+		endY = event.changedTouches[0].clientY;
+		distanceX = endX - startX;
+		distanceY = endY - startY;
+		returnDir(distanceX,distanceY);
+	},false)
+	function returnDir(distanceX,distanceY){
+		if (Math.abs(distanceX) < 20 && Math.abs(distanceY) < 20) {
+			console.log('静止')
+			return
+		};
+		if (Math.abs(distanceX) >= Math.abs(distanceY)){
+			//x
+			if (distanceX > 0) {
+				//right
+				console.log('向右')
+			}else{
+				//left
+				console.log('向左')
+			}
+
+		}else{
+			//y
+			if (distanceY > 0) {
+				//down
+				console.log('向下')
+			}else{
+				console.log('向上')
+			}
+		}
+	}
+
+</script>
+</html>
