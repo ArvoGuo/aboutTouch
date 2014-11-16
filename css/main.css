@@ -1,0 +1,75 @@
+header{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 500px;
+}
+header h1{
+	font-size: 60px;
+	font-family: Arial;
+	font-weight: bold;
+
+}
+header #newgame{
+	display: block;
+	margin: 20px auto;
+
+	width: 100px;
+	padding: 10px;
+	background-color: #8f7a66;
+
+	font-family: Arial;
+	color: #fff;
+
+	border-radius: 10px;
+
+	text-decoration: none;	
+}
+header #newgame:hover{
+	background-color: #9f8b77;
+}
+
+
+header p{
+	font-size: 25px;
+	font-family: Arial;
+	margin: 20px auto;
+}
+
+#grid-container{
+	position: relative;
+
+	width: 460px;
+	height: 460px;
+	padding: 20px;
+	border-radius: 10px;
+	
+	margin: 50px auto;
+
+	background-color: #bbada0;
+
+}
+.grid-cell{
+	position: absolute;
+
+	width: 100px;
+	height: 100px;
+	border-radius: 6px;
+
+	background-color: #ccc0b3
+}
+.number-cell{
+	position: absolute;
+
+	border-radius: 6px;
+	font-size: 60px;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+
+	line-height: 100px;
+}
+
+
+
+
